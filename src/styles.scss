@@ -1,0 +1,272 @@
+/* You can add global styles to this file, and also import other style files */
+
+$backgPos: center center;
+$backAttach: fixed;
+$backgSize: cover;
+$backRep: no-repeat;
+.body {
+    background-attachment: fixed;
+    background-position: $backgPos;
+    background-attachment: $backAttach;
+    background-repeat: $backRep;
+    background-size: cover;
+}
+
+.imagen {
+    background-attachment: fixed;
+    background-position: $backgPos;
+    background-attachment: $backAttach;
+    background-repeat: $backRep;
+    background-size: cover;
+    padding: 15%;
+}
+
+#jumbo {
+    margin-top: 2em;
+}
+
+.tarjeta {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 8px;
+}
+
+.bodyFormLogin {
+    background-attachment: fixed;
+    background-position: $backgPos;
+    background-attachment: $backAttach;
+    background-repeat: $backRep;
+    background-size: cover;
+    padding: 10%;
+}
+
+.bodyFormRegister {
+    background-color: white;
+    background-attachment: fixed;
+    background-position: $backgPos;
+    background-attachment: $backAttach;
+    background-repeat: $backRep;
+    background-size: cover;
+    padding: 10%;
+    width: 100%;
+    height: auto;
+}
+
+.bloque {
+    background-color: lightgrey;
+    padding: 5%;
+    width: 20rem;
+    height: auto;
+}
+
+.form-control-feedback {
+    color: red;
+}
+
+.foto {
+    width: 100px;
+    margin: auto;
+}
+
+.slide {
+    padding-top: 5%;
+}
+
+.contenedor {
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 40rem;
+    border: 2.5px solid rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.divRegisterContent {
+    padding-left: 20%;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 45%;
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media only screen and (max-width: 360px) {
+    .body {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+    }
+    .imagen {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+    .tarjeta {
+        text-align: center;
+        display: felx;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .botCent {
+        margin-right: 6rem;
+    }
+    .botCentRegister {
+        margin-right: 8.5rem;
+    }
+    .divContent {
+        padding-top: 10%;
+    }
+    .slide {
+        padding-top: 10%;
+    }
+    .contenedor {
+        display: block;
+        background: #fff;
+        width: 100%;
+        height: auto;
+        border: 2.5px solid rgb(0, 0, 0);
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .imgDesc {
+        padding-top: 10%;
+    }
+}
+
+@media (max-width: 615px) {
+    .bodyFormLogin {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+        padding-top: 20%;
+    }
+    .slide {
+        padding-top: 10%;
+    }
+}
+
+@media (max-width: 777px) {
+    .bodyFormLogin {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+        padding-top: 20%;
+    }
+    .slide {
+        padding-top: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .body {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+    }
+    .imagen {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+    .tarjeta {
+        margin: auto;
+        padding: 3rem;
+        text-align: center;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .card {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .body {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+    }
+    .imagen {
+        background-attachment: fixed;
+        background-position: $backgPos;
+        background-attachment: $backAttach;
+        background-repeat: $backRep;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+    .tarjeta {
+        margin: auto;
+        padding: 5rem;
+        text-align: center;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .card {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .bloque {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .bloque {
+        display: none;
+    }
+}
+
+.descrip {
+    font-size: 1.5rem;
+}
+
+.imgDesc {
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,25 @@
+<header>
+    <div class="img-fluid imagen" style="background-image: url(assets/img/fondo.jpg);"></div>
+</header>
+<br>
+<hr>
+<br>
+<div style="text-align: center;">
+    <h1>N.A.S.A</h1>
+</div>
+<br>
+<hr>
+<!-- Muestra las noticias del home en un card -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col tarjeta" *ngFor="let noticia of noticias">
+            <div class="card" style="width: 30rem;">
+                <img class="card-img-top" src="{{noticia.imagen}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><a [routerLink]="['/', 'noticia', noticia.key]">{{noticia.titulo}}</a></h5>
+                    <p class="card-text">{{noticia.subtitulo}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

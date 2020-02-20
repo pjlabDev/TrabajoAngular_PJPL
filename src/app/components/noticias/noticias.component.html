@@ -1,0 +1,44 @@
+<header>
+    <div class="img-fluid imagen" style="background-image: url(assets/img/fondo.jpg);"></div>
+</header>
+<br>
+<hr>
+<br>
+<!-- Si la key es null entonces me mostrará las misiones, si no, las noticias que pertenezcan al id enviado. -->
+<div *ngIf="key == null || key == ''" style="text-align: center;">
+    <h1>Misiones</h1>
+</div>
+<div *ngIf="key != null" style="text-align: center;">
+    <h1>Noticias</h1>
+</div>
+<br>
+<hr>
+<!-- Muestra las noticias. -->
+<div class="container" *ngIf="key != null || key != ''">
+    <div class="row justify-content-center" *ngFor="let not of noticia">
+        <div class="col col-md-2">
+            <img class="foto" src="{{not.imagen}}" alt="Esto es una imagen">
+        </div>
+        <div class="col">
+            <a [routerLink]="['/', 'desarrollo', key, not.id]">
+                <h3>{{not.titulo}}</h3>
+            </a>
+            <p>{{not.subtitulo}}</p>
+        </div>
+    </div>
+</div>
+<!-- Muestra las misiones -->
+<div class="container" *ngIf="key == null || key == ''">
+    <div class="row justify-content-center" *ngFor="let mision of misiones">
+        <div class="col col-md-2">
+            <img class="foto" src="{{mision.imagen}}" alt="Esto es una imagen">
+        </div>
+        <div class="col">
+            <a [routerLink]="['/', 'desarrollo', mision.id]">
+                <h3>{{mision.titulo}}</h3>
+            </a>
+            <p>{{mision.subtitulo}}</p>
+        </div>
+    </div>
+</div>
+<br>

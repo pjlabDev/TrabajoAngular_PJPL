@@ -1,0 +1,61 @@
+<body class="body" style="background-image: url(assets/img/fondo2.jpg);">
+    <div class="container-fluid bodyFormLogin">
+        <div class=" container d-block">
+            <div class="card" style="width: 50; height: auto; text-align: center;">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Login</h3>
+                    </div>
+                    <!-- Formulario con el que nos vamos a loguear -->
+                    <!-- Con el formGroup y los formControlName podemos hacer uso de validaciones en nuestro ts-->
+                    <form [formGroup]="dataForm" class="form-group" #loginForm="ngForm">
+                        <div>
+                            <div class="form-group row justify-content-center has-danger">
+                                <label for="inputHorizontalDnger" class="col-md-2 col-form-label">Correo</label>
+                                <div class="col-8">
+                                    <!-- Enviamos al authService el email por aqui gracias al ngModel -->
+                                    <input type="email" class="form-control form-control-danger" formControlName="correo" id="inputHorizontalDnger" placeholder="Correo" name='correo' [(ngModel)]="authService.email">
+                                    <div *ngIf="dataForm.controls.correo.errors?.required && dataForm.controls.correo.touched" class="form-control-feedback">Este campo es obligatorio.</div>
+                                    <div *ngIf="dataForm.controls.correo.errors?.pattern" class="form-control-feedback">Introduzca un correo válido. Ej: exmple@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row justify-content-center has-danger">
+                            <label for="inputHorizontalDnger" class="col-md-2 col-form-label">Password</label>
+                            <div class="col-8">
+                                <!-- Enviamos al authService la contraseña por aqui, gracias al ngModel -->
+                                <input type="password" class="form-control form-control-danger" formControlName="pass" id="inputHorizontalDnger" placeholder="Password" name="password" [(ngModel)]="authService.pass">
+                                <div *ngIf="dataForm.controls.pass.errors?.required && dataForm.controls.pass.touched" class="form-control-feedback">Este campo es obligatorio.</div>
+                                <div *ngIf="dataForm.controls.pass.errors?.minlength" class="form-control-feedback">Debe contener como máximo {{dataForm.controls.pass.errors?.minlength.requiredLength}} caracteres.</div>
+                            </div>
+                        </div>
+                        <div class="form-group row justify-content-center botCent has-danger">
+                            <div class="col-8">
+                                <!-- Boton Login con firebase -->
+                                <button [disabled]="!dataForm.valid" (click)="login()" type="submit" class="btn btn-outline-primary">
+                                    <b>Acceder</b>
+                                </button>
+                                <!-- Boton para poder registrarse con firebase -->
+                                <button [disabled]="!dataForm.valid" (click)="registrarse()" type="submit" class="btn btn-outline-primary">
+                                    <b>Registrar</b>
+                                </button>
+                            </div>
+                            <div>
+                                <p>Si no tienes una cuenta, regístrate</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- Jumbo decorativo -->
+        <div id="jumbo" class="jumbotron jumbotron-fluid" style="width: 100%;">
+            <div class="container">
+                <h1 class="display-3">N.A.S.A</h1>
+                <p class="lead">Bienvenidos a la Landing Page de la NASA donde podréis apuntaros para aprender y poder estudiar con nuestros mejores trabajadores.</p>
+            </div>
+        </div>
+    </div><br>
+</body>

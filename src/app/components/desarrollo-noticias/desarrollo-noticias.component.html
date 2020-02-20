@@ -1,0 +1,63 @@
+<body class="body">
+    <!-- Muestra el desarrollo de las noticias -->
+    <div class="container-fluid">
+        <div *ngIf="mision.length == 0">
+            <div class="row justify-content-center" style="padding: 5%;">
+                <br/>
+                <hr/>
+                <br/>
+                <img class="img-fluid imgDesc" style="width: 40%;" src="{{ noticia[2] }}" alt="Esto es una imagen">
+                <br/>
+                <hr/>
+                <br/>
+                <div class="col-md-8 col-md-push-4" style="padding-top: 5%;">
+                    <div class=" container d-block divContent">
+                        <div>
+                            <h1>{{ noticia[5] }}</h1>
+                            <br/>
+                            <hr/>
+                            <br/>
+                            <img class="img-fluid" src="{{ noticia[3] }}" alt="Esto es una imagen">
+                            <br/>
+                            <hr/>
+                            <br/>
+                            <p class="descrip">{{ noticia[0] }}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--  Muestra el desarrollo de las misiones -->
+    <div class="container-fluid">
+        <div *ngIf="mision != null">
+            <div *ngFor="let m of mision" class="row justify-content-center" style="padding: 5%;">
+                <br/>
+                <hr/>
+                <br/>
+                <img class="img-fluid imgDesc" src="{{ m.imagen }}" alt="Esto es una imagen">
+                <br/>
+                <hr/>
+                <br/>
+                <div class="col-md-8 col-md-push-4" style="padding-top: 5%;">
+                    <div class=" container d-block divContent">
+                        <div>
+                            <h1>{{ m.titulo }}</h1>
+                            <br/>
+                            <hr/>
+                            <br/>
+                            <img class="img-fluid" src="{{ m.imagen2 }}" alt="Esto es una imagen">
+                            <br/>
+                            <hr/>
+                            <br/>
+                            <p class="descrip">{{ m.descrip }}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+</body>
